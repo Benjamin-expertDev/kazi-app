@@ -9,7 +9,7 @@ const app = express()
 //middleware
 app.use(express.json()),
 app.use(express.urlencoded({extended:false}));
-app.use(taskRoutes); 
+app.use("/api/tasks", taskRoutes); 
 
 //Routes
 app.get ("/", (req, res)=> {
